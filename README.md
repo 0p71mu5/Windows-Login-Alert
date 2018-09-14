@@ -15,6 +15,21 @@ After downloading python 3 run the below command in Windows-Login-Alert director
 python -m pip install -r requirements.txt
 ```
 
+## Config:
+You need to mention Way2SMS registered mobile number and credentials along with alert receiving mobile number in __config.py__ file.
+```
+registered_mobile_windows_state_alert = ['9999999999']  # number registered on way2sms
+receiver_number_windows_state_alert = ['9999999999']    # number where alert is to be sent
+pass_windows_state_alert=['password']                   # credential for numbers registered in way2sms
+```
+
+Since, Way2SMS have limit of 25 text messages per day, you can create multiple accounts and mention them in __config.py__ file.
+```
+registered_mobile_windows_state_alert = ['9999999999','8888888888','7777777777']  # numbers registered on way2sms
+receiver_number_windows_state_alert = ['9999999999']                              # number where alert is to be sent
+pass_windows_state_alert=['password1','password2','password2']                    # credentials for numbers registered in way2sms
+```
+
 ## Usage:
 Copy the __windows_state_change_alert-login.bat__ file in 
 C:\Users\\*username*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup folder in Windows OS.
